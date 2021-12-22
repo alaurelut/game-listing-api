@@ -10,7 +10,7 @@ services:
     volumes:
       - mongodb_data_container:/data/db
 
-  unity-game-listing-api:
+  game-listing-api:
     build:
       context: .
     restart: always
@@ -22,9 +22,9 @@ services:
     depends_on:
       - mongodb
 
-  unity-game-listing-ui:
+  game-listing-ui:
     build:
-      context: ../unity-game-listing-ui
+      context: ../game-listing-ui
     restart: always
     ports:
       - 8080:80

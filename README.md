@@ -24,7 +24,38 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Game listing API using [Nest](https://github.com/nestjs/nest) framework.
+Connected to a MongoDB database.
+List all games, a single game, update or delete a game.
+
+## Dependencies
+
+- Node.js
+- NPM
+- MongoDB running on port 27017 ( you can use docker-compose to start the DB or the full solution)
+
+## Running the full solution with docker
+
+Full solution (Mongodb + API + Front-end)
+
+First pull the front-end github repo
+
+```
+cd ../
+git clone https://github.com/alaurelut/game-listing-ui.git
+```
+
+Then come back in the API project and run the full solution with docker compose
+
+```bash
+cd game-listing-api/
+docker-compose up
+```
+
+This will start the MongoDB database, the back-end API on http://localhost:3000, and the front-end on http://localhost:8080.
+You can then start adding new games to the Database via the UI.
+
+## Test
 
 ## Installation
 
@@ -32,7 +63,7 @@
 $ npm install
 ```
 
-## Running the app
+## Running the app for development
 
 ```bash
 # development
@@ -45,8 +76,6 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
-
 ```bash
 # unit tests
 $ npm run test
@@ -58,15 +87,9 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
+## Swagger documentation
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+A swagger documentation is available on http://localhost:3000/api/
 
 ## License
 
