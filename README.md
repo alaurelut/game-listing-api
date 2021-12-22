@@ -55,8 +55,6 @@ docker-compose up
 This will start the MongoDB database, the back-end API on http://localhost:3000, and the front-end on http://localhost:8080.
 You can then start adding new games to the Database via the UI.
 
-## Test
-
 ## Installation
 
 ```bash
@@ -75,6 +73,8 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+
+## Test
 
 ```bash
 # unit tests
